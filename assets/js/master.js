@@ -9,9 +9,13 @@ var prezzoBiglietto = km * prezzo;
 
 // Calcolo sconti per fasce d'età;
 if (anni < 18) {
-    alert("Il prezzo del tuo biglietto è €" + (prezzoBiglietto - ((prezzoBiglietto * 20) /100) + " perchè sei minorenne"));
+    // alert("Il prezzo del tuo biglietto è di €" + (prezzoBiglietto - ((prezzoBiglietto * 20) /100) + " perchè sei minorenne"));
+    document.getElementById('totale') .innerHTML = "Il prezzo del tuo biglietto è di €" + (prezzoBiglietto - ((prezzoBiglietto * 20) /100) + " perchè sei minorenne");
   } else if (anni > 65) {
-    alert("Il prezzo del tuo biglietto è €" + (prezzoBiglietto - (prezzoBiglietto * 40) /100 + " perchè sei vecchia"));
+    // alert("Il prezzo del tuo biglietto è di €" + (prezzoBiglietto - (prezzoBiglietto * 40) /100 + " perchè sei vecchia"));
+    document.getElementById('totale') .innerHTML = "Il prezzo del tuo biglietto è di €" + (prezzoBiglietto - ((prezzoBiglietto * 20) /100) + " perchè sei vecchia");
   } else {
-    alert("Il prezzo del tuo biglietto è €" + prezzoBiglietto);
+    // alert("Il prezzo del tuo biglietto è di €" + prezzoBiglietto);
+    document.getElementById('totale') .innerHTML = "Il prezzo del tuo biglietto è di €" + prezzoBiglietto;
+
   }
